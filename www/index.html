@@ -41,6 +41,7 @@
 		<script type="text/javascript">			
 			// Initializing global variables			
 			var pushNotification;
+			var deviceUUID = 0;
 			
 			var calcTop = ((document.body.clientHeight / 2) - 48);
 			var calcLeft = ((document.body.clientWidth / 2) - 48);
@@ -78,10 +79,12 @@
 			function onDeviceReady() {
 				alert('Test');
 				alert('DUUID:: '+device.uuid);
-				/*
+				// Set device UUID
+				deviceUUID = device.uuid;
+				
 				// Blanker on change				
-				document.addEventListener("online", deviceOnline, false);
-				document.addEventListener("offline", deviceOffline, false);
+				document.addEventListener("online", doWhenOnline, false);
+				document.addEventListener("offline", doWhenOffline, false);
 				var networkState = navigator.connection.type;
 				if(networkState == Connection.NONE) {
 					doWhenOffline();
@@ -90,16 +93,7 @@
 				else{
 					doWhenOnline();
 				} 
-				*/
-			}			
-			
-			function deviceOnline(){
-				doWhenOnline();
-			}
-			
-			function deviceOffline(){
-				doWhenOffline();
-			}
+			}	
 			
 			function doWhenOnline(){
 				document.getElementById('offline-screen').style.display = 'none';
@@ -116,7 +110,7 @@
 					}
 				);
 			*/
-				getMyUi('0');
+				getMyUi(deviceUUID)
 			}
 			
 			function doWhenOffline(){				
