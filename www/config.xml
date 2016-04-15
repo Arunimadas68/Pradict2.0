@@ -17,20 +17,17 @@
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="true" />
-    <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
-    <preference name="android-installLocation" value="auto" />
-    
+    <preference name="android-installLocation" value="auto" />    
     <preference name="SplashScreen" value="splash" />
-	<preference name="SplashScreenDelay" value="10000" />
+	<preference name="SplashScreenDelay" value="4000" />
 	
-	<preference name="loadUrlTimeoutValue" value="60000" />
-	<preference name="errorUrl" value="file:///android_asset/www/connection_error.html" />
+	
 	
 <!--	<preference name="APP_ID" value="802063789861967" />
     <preference name="APP_NAME" value="Pool Portal" />	-->
