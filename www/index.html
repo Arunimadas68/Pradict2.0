@@ -34,6 +34,12 @@
     </head>
     
     <body>
+		<script type="text/javascript">			
+			// Initializing global variables			
+			var pushNotification;
+			var deviceUUID = device.uuid;
+		</script
+		
 		<div id="blanker"></div>
 		<div id="offline-screen"></div>		
 		<iframe src="#" onload="loaded();" name="container-frame" id="container-frame" seamless="seamless" width="100%" height="100%" style="overflow-x:hidden; border:none;"></iframe>
@@ -41,7 +47,7 @@
 		<script type="text/javascript">			
 			// Initializing global variables			
 			var pushNotification;
-			var deviceUUID = 0;
+			var deviceUUID = device.uuid;
 			
 			var calcTop = ((document.body.clientHeight / 2) - 48);
 			var calcLeft = ((document.body.clientWidth / 2) - 48);
@@ -73,13 +79,9 @@
 				document.getElementById('container-frame').src = 'http://app.pradict.com/index.php?id=1&devId='+myDeviceToken;
 			}				
 			
-			function onDeviceReady() {
-				// Initializing uuid
-				deviceUUID = device.uuid;
+			function onDeviceReady() {		
 				document.getElementById('container-frame').src = 'http://app.pradict.com/index.php?id=1&devId='+deviceUUID;
-				
-				// Blanker on change
-				document.getElementById('blanker').style.display = 'block';				
+				// Blanker on change						
 				document.addEventListener("online", doWhenOnline, false);
 				document.addEventListener("offline", doWhenOffline, false);
 				var networkState = navigator.connection.type;
@@ -89,7 +91,6 @@
 				else{
 					doWhenOnline();
 				}
-				doWhenOnline();
 			}	
 			
 			function doWhenOnline(){
