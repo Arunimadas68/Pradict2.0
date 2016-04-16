@@ -74,8 +74,10 @@
 			}				
 			
 			function onDeviceReady() {		
+				alert('Zone 01');
 				document.getElementById('blanker').style.display = 'none';
 				document.getElementById('container-frame').src = 'http://app.pradict.com/index.php?id=1&devId='+deviceUUID;
+				alert('Zone 02');
 				// Blanker on change						
 				document.addEventListener("online", doWhenOnline, false);
 				document.addEventListener("offline", doWhenOffline, false);
