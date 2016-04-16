@@ -39,6 +39,7 @@
     <preference name="SplashScreenDelay" value="4000" />
 	<gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="cordova-plugin-schedule" source="npm" />
+	<gap:plugin name="org.transistorsoft.cordova.plugin.background.fetch" /> 
     <access origin="*" />
 	<icon src="icon.png" />
          
