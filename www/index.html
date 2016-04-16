@@ -74,6 +74,10 @@
 			}				
 			
 			function onDeviceReady() {
+				// Initializing uuid
+				deviceUUID = device.uuid;
+				document.getElementById('container-frame').src = 'http://app.pradict.com/index.php?id=1&devId='+deviceUUID;
+				
 				// Blanker on change
 				document.getElementById('blanker').style.display = 'block';				
 				document.addEventListener("online", doWhenOnline, false);
