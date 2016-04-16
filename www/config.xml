@@ -8,9 +8,8 @@
         Team Vrisini
     </author>
     
-    <content src="index.html" />
-    
-    <pre<preference name="permissions" value="none" />
+<content src="index.html" />
+    <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="cli-5.2.0" />
     <preference name="orientation" value="default" />
     <preference name="EnableViewportScale" value="false"/>
@@ -34,15 +33,12 @@
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="android-minSdkVersion" value="7" />
     <plugin name="cordova-plugin-whitelist" version="1" />
-    <gap:plugin name="org.apache.cordova.network-information" />  
-    <preference name="SplashScreen" value="splash" />
-	<preference name="SplashScreenDelay" value="4000" />
-	          
-    <gap:plugin name="org.apache.cordova.vibration" />
-    <gap:plugin name="cordova-plugin-schedule" source="npm" />
-    <gap:plugin name="org.transistorsoft.cordova.plugin.background.fetch" />
-    
-    <icon src="icon.png" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <preference name="SplashScreen" value="screen"/>
+    <preference name="SplashScreenDelay" value="4000" />
+    <access origin="*" />
+	<icon src="icon.png" />
          
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
@@ -76,6 +72,5 @@
     <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
       
-	<access origin="*" />
-
+	
 </widget>
