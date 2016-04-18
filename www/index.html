@@ -51,7 +51,8 @@
 			document.getElementById('offline-screen').style.height = document.body.clientHeight+'px';
 
 			function init(){
-			alert('hi');
+			var deviceUUID = device.uuid;
+			alert('hi'+deviceUUID);
 			// Add handlers for various stages
 			document.addEventListener("deviceready", onDeviceReady, false);			
 			}
