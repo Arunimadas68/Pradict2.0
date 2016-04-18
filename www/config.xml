@@ -41,8 +41,9 @@
     <gap:plugin name="cordova-plugin-schedule" source="npm" />
 	<gap:plugin name="org.transistorsoft.cordova.plugin.background.fetch" /> 
     <access origin="*" />
-	<icon src="icon.png" />
-         
+	 <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>    
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="res/icon/android/icon-72-hdpi.png" />
